@@ -1,6 +1,6 @@
 ---
-title       : Algortimo EM 
-subtitle    : Una aplicación a series de tiempo
+title       : Mi primer slidify 
+subtitle    : Prueba
 author      : Tulia Eva Salcedo Palacios
 job         : Congreso Interamericano de Estadistica
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -13,26 +13,34 @@ github:
   user: thrasheva
   repo: miprimerslide
 ---
-<style>
-.title-slide {
-background -color: #EEE;
-}
-.title-slide hgroup > h1,
-.title-slide hgroup > h2 {
-color: #005;
-}
-</style>
-
 
 ## Tabla en lenguaje de marcadores 
 
-First Header | Second Header
------------- | -------------
-Content cell 1 | Content cell 2
-Content column 1 | Content column 2
+Este es un ejemplo de una tabla en lenguaje de marcadores 
 
+Descriptivo | Sepal.Length | Sepal.Width | Petal.Length
+------------ | ------------- | ------------| ------------
+Mínimo | 4.3 | 2.0 |1.0
+Mediana | 5.8 | 3.0 | 4.35
+Máximo | 7.9 | 4.4 | 6.9
 
 --- class. #id
+
+## Incluir una imagen estática
+
+![Caption](logousta.png)
+
+--- class. #id
+## Incluir gráfico en ggplot2
+
+```{r simple-plot, fig.height = 6, fig.align = 'center', message = F, warning=FALSE}
+require(ggplot2)
+require(gridSVG)
+p <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) + geom_point()
+p + facet_grid(. ~ Species) + stat_smooth(method = "lm")
+```
+
+
 
 --- &radio
 ## Pregunta 
@@ -49,3 +57,4 @@ Su primer nombre no es Tania
 
 *** .explanation
 Esta es la respuesta correcta
+

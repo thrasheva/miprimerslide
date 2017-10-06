@@ -15,7 +15,7 @@ github:
 ---
 
 ## Tabla en lenguaje de marcadores 
-}
+
 Este es un ejemplo de una tabla en lenguaje de marcadores 
 
 Descriptivo | Sepal.Length | Sepal.Width | Petal.Length
